@@ -1,0 +1,10 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large or third-party media kept out of the repository
+*.zip
+*.mp3
+*.ogg
+*.mp4
+*.pdf
