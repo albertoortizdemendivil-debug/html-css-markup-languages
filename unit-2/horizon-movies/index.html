@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required: one specific sentence that summarises THIS page -->
+    <meta name="description"
+        content="Horizon Movies home page: discover our four screens, this week's films, ticket prices, opening hours and how to contact us.">
+    <!-- Required: title that says what the page contains -->
+    <title>Horizon Movies | Home - Films, prices and reviews</title>
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/estilos-propios.css">
+</head>
+
+<body>
+
+    <!-- Navigation menu (same on every page; the current page has class="active") -->
+    <nav id="menu-principal">
+        <ul>
+            <li><a href="index.html" class="active">MAIN</a></li>
+            <li><a href="html/catalog.html">CATALOG</a></li>
+            <li><a href="html/team.html">TEAM</a></li>
+            <li><a href="html/reviews.html">REVIEWS</a></li>
+            <li><a href="html/prices.html">PRICES</a></li>
+            <li><a href="html/about_us.html">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Required: one h1 with the title of the page -->
+        <h1>Welcome to Horizon Movies</h1>
+        <p>Four screens, the best films of the week and a seat waiting for you. Pick a film, check the prices and enjoy
+            the show.</p>
+
+        <!-- Cover image: figure + figcaption, responsive thanks to Bootstrap's img-fluid -->
+        <figure>
+            <img src="resources/images/cinema-room.png" class="img-fluid mb-2"
+                alt="Empty cinema auditorium with gray seats facing a large screen">
+            <figcaption>Screen 1 of Horizon Movies, our biggest auditorium.</figcaption>
+        </figure>
+
+        <!-- Presentation of the website: what it is, who it is for and what it offers -->
+        <section>
+            <h2>About our cinema</h2>
+            <p>
+                <strong>Horizon Movies</strong> is a neighbourhood cinema with <em>four screens and
+                    surround sound</em>. Screen 1 offers IMAX 70mm projection and the other three screens
+                have digital projection. We show the latest releases, family films and a selection of
+                classic movies every week, so that there is always something for everyone.
+            </p>
+            <p>
+                On this website you can find out which films are on, how much a ticket costs, what other
+                viewers think about our cinema and who we are. Everything is organised in five simple pages
+                that you can read in just a few minutes before coming to the cinema.
+            </p>
+            <p>
+                Whether you are planning a night out with friends, an afternoon with the family or a quiet
+                evening on your own, you can use the menu at the top of every page to move around. The
+                highlighted option always shows the page where you are.
+            </p>
+        </section>
+
+        <!-- One card per page of the website (Bootstrap grid: 3 columns on desktop, 1 on mobile) -->
+        <section class="row">
+            <h2 class="col-12">What you will find</h2>
+
+            <article class="col-md-4">
+                <h3>Catalog</h3>
+                <p>All the films we are showing now, with their poster, director, genre and a short description.</p>
+                <p><a href="html/catalog.html">See the films</a></p>
+            </article>
+
+            <article class="col-md-4">
+                <h3>Prices</h3>
+                <p>Ticket prices for adults, children and seniors, plus our Cinema Day discount and the price of food
+                    and drinks.</p>
+                <p><a href="html/prices.html">See the prices</a></p>
+            </article>
+
+            <article class="col-md-4">
+                <h3>Reviews</h3>
+                <p>Read what other viewers think about our cinema, our staff and our prices.</p>
+                <p><a href="html/reviews.html">Read the reviews</a></p>
+            </article>
+
+            <article class="col-md-4">
+                <h3>Team</h3>
+                <p>Meet the three people behind Horizon Movies and what each one does to make your visit better.</p>
+                <p><a href="html/team.html">Meet the team</a></p>
+            </article>
+
+            <article class="col-md-4">
+                <h3>About us</h3>
+                <p>Our story, how to find us and a contact form for your comments, questions or suggestions.</p>
+                <p><a href="html/about_us.html">Contact us</a></p>
+            </article>
+        </section>
+
+        <!-- Featured films of the week: they are three of the films of the catalog. Each card uses a description list (dl) -->
+        <section class="row">
+            <h2 class="col-12">This week's highlights</h2>
+
+            <article class="col-md-4">
+                <h3>The Black Ball</h3>
+                <dl>
+                    <dt>Genre</dt>
+                    <dd>Drama</dd>
+                    <dt>Duration</dt>
+                    <dd>134 minutes</dd>
+                    <dt>Showtimes</dt>
+                    <dd>17:00 and 20:30</dd>
+                </dl>
+            </article>
+
+            <article class="col-md-4">
+                <h3>Titanic</h3>
+                <dl>
+                    <dt>Genre</dt>
+                    <dd>Romance drama</dd>
+                    <dt>Duration</dt>
+                    <dd>194 minutes</dd>
+                    <dt>Showtimes</dt>
+                    <dd>16:15 and 19:30</dd>
+                </dl>
+            </article>
+
+            <article class="col-md-4">
+                <h3>Forrest Gump</h3>
+                <dl>
+                    <dt>Genre</dt>
+                    <dd>Drama comedy</dd>
+                    <dt>Duration</dt>
+                    <dd>142 minutes</dd>
+                    <dt>Showtimes</dt>
+                    <dd>17:45 and 20:30</dd>
+                </dl>
+            </article>
+            <p class="col-12">The full list of films is available in the <a href="html/catalog.html">catalog</a>.</p>
+        </section>
+
+        <!-- Benefits of the cinema: unordered list -->
+        <section>
+            <h2>Why choose Horizon Movies</h2>
+            <ul>
+                <li><strong>Comfortable seats.</strong> Wide reclining seats with plenty of legroom in all four screens.
+                </li>
+                <li><strong>Great picture and sound.</strong> IMAX 70mm projection in Screen 1, digital projection in
+                    the other three and surround sound in all of them.</li>
+                <li><strong>Something for everyone.</strong> New releases, family films and classics every week.</li>
+                <li><strong>Fair prices.</strong> Reduced tickets for children and seniors, and a discount day every
+                    week.</li>
+                <li><strong>Accessible for all.</strong> Step-free entrance and reserved spaces for wheelchair users.
+                </li>
+            </ul>
+        </section>
+
+        <!-- How to plan a visit: ordered list, because the order of the steps matters -->
+        <section>
+            <h2>Plan your visit</h2>
+            <p>Going to the cinema with us is very simple. Just follow these steps:</p>
+            <ol>
+                <li>Look at the <a href="html/catalog.html">catalog</a> and choose a film and a showtime.</li>
+                <li>Check the <a href="html/prices.html">prices</a> to see which ticket suits you best.</li>
+                <li>Read the <a href="html/reviews.html">reviews</a> if you want to know what other viewers think of us.
+                </li>
+                <li>Come to our box office, pick your seats and enjoy the film.</li>
+            </ol>
+        </section>
+
+        <!-- Opening hours: table with caption and header cells -->
+        <section>
+            <h2>Opening hours</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <caption>The box office opens 30 minutes before the first showtime.</caption>
+                    <thead>
+                        <tr>
+                            <th>Days</th>
+                            <th>Opening hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday to Thursday</td>
+                            <td>16:00 - 23:00</td>
+                        </tr>
+                        <tr>
+                            <td>Friday and Saturday</td>
+                            <td>16:00 - 01:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday and bank holidays</td>
+                            <td>16:00 - 22:30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Frequently asked questions: details/summary is an HTML5 tag that opens and closes without JavaScript -->
+        <section>
+            <h2>Quick answers</h2>
+
+            <details>
+                <summary>When is the cheapest day to go?</summary>
+                <p>Every Wednesday is Cinema Day, with reduced prices on standard tickets. See the details on the <a
+                        href="html/prices.html">prices page</a>.</p>
+            </details>
+
+            <details>
+                <summary>Can I bring my own food and drinks?</summary>
+                <p>We have a snack bar with popcorn, drinks and sweets, so we ask you not to bring outside food into the
+                    auditoriums.</p>
+            </details>
+
+            <details>
+                <summary>How can I send a comment or a suggestion?</summary>
+                <p>Use the contact form on the <a href="html/about_us.html">About us</a> page. We read every message.
+                </p>
+            </details>
+
+            <details>
+                <summary>Does the website work on my mobile phone?</summary>
+                <p>Yes. The design is responsive, so the pages adapt to the size of your screen.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Horizon Movies. All rights reserved.</p>
+        <address>Araba Kalea, 39 &middot; Open every day from 16:00</address>
+        <p>Questions? <a href="html/about_us.html">Contact us</a></p>
+    </footer>
+</body>
+
+</html>

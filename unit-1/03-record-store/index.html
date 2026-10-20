@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Record Store</title>
+    <!-- Req. 16: ruta relativa a la hoja de estilos -->
+    <link rel="stylesheet" href="resources/styles/record-store.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Record Store</h1>
+        <nav>
+            <a href="#songs-table">View catalog</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="record-store">
+            <h2>Vinyl catalog</h2>
+
+            <!-- Req. 1: tabla con 3 artistas y sus álbumes -->
+            <!-- Req. 5: id para dar estilo a una etiqueta concreta con CSS -->
+            <table id="songs-table">
+                <caption>Records available in the store</caption>
+                <thead>
+                    <tr>
+                        <!-- Req. 3: celda combinada horizontalmente (colspan) -->
+                        <th colspan="2" scope="colgroup">Songs and Artist</th>
+                        <th scope="col">Album</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Req. 6: class común para dar estilo a un grupo de filas -->
+                    <!-- Req. 7 y 8: colores alternos (nth-child) y efecto hover, definidos en el CSS -->
+                    <tr class="record-row">
+                        <!-- Req. 2: columna con los nombres de las canciones en una lista -->
+                        <td>
+                            <ul>
+                                <li>Something
+                                    <!-- Req. 9: lista anidada con versiones especiales de la canción -->
+                                    <ul>
+                                        <li>Remastered 2009</li>
+                                        <li>Live Version</li>
+                                    </ul>
+                                </li>
+                                <li>Here Comes the Sun</li>
+                                <li>Because</li>
+                            </ul>
+                        </td>
+                        <td>The Beatles</td>
+                        <!-- Req. 4 y 13: nombre del álbum como enlace externo -->
+                        <td>
+                            <a href="https://en.wikipedia.org/wiki/Abbey_Road" target="_blank" rel="noopener noreferrer">Abbey Road</a>
+                        </td>
+                        <td>$25.99</td>
+                        <!-- Req. 10 y 12: celda con enlace interno a otra parte de la misma página -->
+                        <td>
+                            <a href="#store-info">Where to buy</a>
+                        </td>
+                    </tr>
+                    <tr class="record-row">
+                        <td>
+                            <ul>
+                                <li>Money</li>
+                                <li>Us and Them</li>
+                                <li>Set the Controls for the Heart of the Sun</li>
+                            </ul>
+                        </td>
+                        <td>Pink Floyd</td>
+                        <td>
+                            <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon" target="_blank" rel="noopener noreferrer">The Dark Side of the Moon</a>
+                        </td>
+                        <td>$29.99</td>
+                        <td>
+                            <a href="#store-info">Where to buy</a>
+                        </td>
+                    </tr>
+                    <tr class="record-row">
+                        <td>
+                            <ul>
+                                <li>Karma Police</li>
+                                <li>No Surprises</li>
+                                <li>Paranoid Android</li>
+                            </ul>
+                        </td>
+                        <td>Radiohead</td>
+                        <td>
+                            <a href="https://en.wikipedia.org/wiki/OK_Computer" target="_blank" rel="noopener noreferrer">OK Computer</a>
+                        </td>
+                        <td>$27.50</td>
+                        <td>
+                            <a href="#store-info">Where to buy</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+
+    <!-- Destino de los enlaces internos "Where to buy" (Req. 10 y 12) -->
+    <footer id="store-info">
+        <h2>Visit the store</h2>
+        <p>Open Monday to Saturday, 10:00 to 20:00.</p>
+        <p><a href="#songs-table">Back to the catalog</a></p>
+        
+    </footer>
+</body>
+</html>

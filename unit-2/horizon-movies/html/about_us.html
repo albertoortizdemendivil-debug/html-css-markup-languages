@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required: one specific sentence that summarises THIS page -->
+    <meta name="description"
+        content="About Horizon Movies: our story, what we believe in, how to find us and a contact form to send us your comments, questions or suggestions.">
+    <!-- Required: title that says what the page contains -->
+    <title>About us | Horizon Movies - Our story and contact form</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/estilos-propios.css">
+</head>
+
+<body>
+
+    <!-- Navigation menu (same on every page; the current page has class="active") -->
+    <nav id="menu-principal">
+        <ul>
+            <li><a href="../index.html">MAIN</a></li>
+            <li><a href="catalog.html">CATALOG</a></li>
+            <li><a href="team.html">TEAM</a></li>
+            <li><a href="reviews.html">REVIEWS</a></li>
+            <li><a href="prices.html">PRICES</a></li>
+            <li><a href="about_us.html" class="active">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Required: one h1 with the title of the page -->
+        <h1>About us</h1>
+        <p>Get to know Horizon Movies, find out how to reach us and tell us what you think.</p>
+
+        <!-- Our story -->
+        <section>
+            <h2>Our story</h2>
+            <p>
+                <strong>Horizon Movies</strong> opened its doors in 2008 with a single screen and a simple
+                idea: to bring the magic of the big screen back to the neighbourhood. Over the years the
+                cinema has grown into <em>four screens</em> with surround sound and comfortable reclining
+                seats, including Screen 1, equipped with an IMAX 70mm projector.
+            </p>
+            <p>
+                Today we show new releases, family films and a weekly selection of classics. Our team
+                chooses every film with care, because we believe that going to the cinema should be an
+                experience you look forward to, not just a way to spend an evening.
+            </p>
+            <p>
+                Horizon Movies is a fictional cinema created by a team of three students as part of the
+                web design module. You can meet them on the <a href="team.html">team page</a>.
+            </p>
+        </section>
+
+        <!-- Values: unordered list -->
+        <section>
+            <h2>What we believe in</h2>
+            <ul>
+                <li><strong>Cinema for everyone.</strong> Fair prices, a weekly discount day and an accessible building.
+                </li>
+                <li><strong>Quality first.</strong> Excellent picture and sound in every auditorium.</li>
+                <li><strong>Listening to our audience.</strong> Your comments help us choose better films and improve
+                    the cinema.</li>
+                <li><strong>Part of the neighbourhood.</strong> We organise school visits and film clubs throughout the
+                    year.</li>
+            </ul>
+        </section>
+
+        <!-- Contact details: description list (dl) + address tag -->
+        <section>
+            <h2>Find us</h2>
+            <address>
+                <dl>
+                    <dt>Address</dt>
+                    <dd>Araba Kalea, 39, 01006 Vitoria-Gasteiz, Araba</dd>
+                    <dt>Telephone</dt>
+                    <dd><a href="tel:+34000000000">+34 000 000 000</a></dd>
+                    <dt>Email</dt>
+                    <dd><a href="mailto:info@example.com">info@example.com</a></dd>
+                    <dt>Opening hours</dt>
+                    <dd>Every day from 16:00. See the full timetable on the <a href="../index.html">main page</a>.</dd>
+                </dl>
+            </address>
+
+            <h3>How to get here</h3>
+            <ol>
+                <li>By bus: several city bus lines stop near the cinema.</li>
+                <li>By tram: get off at the stop closest to Araba Kalea and walk for a few minutes.</li>
+                <li>By car: there are public car parks near the cinema.</li>
+            </ol>
+        </section>
+
+        <!-- Contact form: the required form to send comments -->
+        <section id="contact">
+            <h2>Send us a message</h2>
+            <p>Fill in the form below and we will answer you as soon as possible. Fields marked with * are required.</p>
+
+            <!-- CHANGE: action must be the URL of a form service (Formspree, Getform, Web3Forms...) -->
+            <form name="contact" method="post" netlify>
+                <fieldset>
+                    <legend>Your message</legend>
+
+                    <!-- Text field -->
+                    <p>
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" autocomplete="name" placeholder="Your full name"
+                            required>
+                    </p>
+
+                    <!-- Email field (the browser checks the format) -->
+                    <p>
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com"
+                            required>
+                    </p>
+
+                    <!-- Drop-down list -->
+                    <p>
+                        <label for="topic">What is your message about?</label>
+                        <select id="topic" name="topic">
+                            <option value="comment">General comment</option>
+                            <option value="film">Question about a film</option>
+                            <option value="prices">Question about prices</option>
+                            <option value="suggestion">Suggestion</option>
+                        </select>
+                    </p>
+
+                    <!-- Radio buttons: only one option can be chosen -->
+                    <p>
+                        Have you visited us before?
+                        <input type="radio" id="visited-yes" name="visited" value="yes">
+                        <label for="visited-yes">Yes</label>
+                        <input type="radio" id="visited-no" name="visited" value="no">
+                        <label for="visited-no">No</label>
+                    </p>
+
+                    <!-- Multi-line text area -->
+                    <p>
+                        <label for="message">Comment *</label>
+                        <textarea id="message" name="message" rows="6" minlength="10"
+                            placeholder="Write your comment, question or suggestion here" required></textarea>
+                    </p>
+
+                    <!-- Checkbox -->
+                    <p>
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">I agree that Horizon Movies uses my data to answer my message *</label>
+                    </p>
+
+                    <!-- Buttons -->
+                    <p>
+                        <button type="submit">Send message</button>
+                        <button type="reset">Clear</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Horizon Movies. All rights reserved.</p>
+        <address>Araba Kalea, 39 &middot; Open every day from 16:00</address>
+        <p>Questions? <a href="#contact">Send us a message</a></p>
+    </footer>
+</body>
+
+</html>

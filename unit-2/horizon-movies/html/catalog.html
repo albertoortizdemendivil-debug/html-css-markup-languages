@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required: one specific sentence that summarises THIS page -->
+    <meta name="description"
+        content="Catalog of the films currently showing at Horizon Movies, with their posters, directors, genres and a short description of each one.">
+    <!-- Required: title that says what the page contains -->
+    <title>Catalog | Horizon Movies - Films now showing</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/estilos-propios.css">
+</head>
+
+<body>
+
+    <!-- Navigation menu (same on every page; the current page has class="active") -->
+    <nav id="menu-principal">
+        <ul>
+            <li><a href="../index.html">MAIN</a></li>
+            <li><a href="catalog.html" class="active">CATALOG</a></li>
+            <li><a href="team.html">TEAM</a></li>
+            <li><a href="reviews.html">REVIEWS</a></li>
+            <li><a href="prices.html">PRICES</a></li>
+            <li><a href="about_us.html">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Required: one h1 with the title of the page -->
+        <h1>CATALOG</h1>
+        <p>This is the list of films we have available at this moment.</p>
+
+        <!-- Poster carousel: moved by the script below and styled in the CSS file -->
+        <section>
+            <h2>Now showing</h2>
+            <div class="carousel" id="carousel">
+                <div class="carousel-track">
+                    <img src="../resources/images/la-bola-negra.jpg" alt="Poster of The Black Ball (La bola negra)">
+                    <img src="../resources/images/interstellar.jpg" alt="Poster of Interstellar">
+                    <img src="../resources/images/the-terminal.jpg" alt="Poster of The Terminal">
+                    <img src="../resources/images/the-god-father.jpg" alt="Poster of The Godfather">
+                    <img src="../resources/images/pulpfiction.jpg" alt="Poster of Pulp Fiction">
+                    <img src="../resources/images/the-lord-of-the-rings.jpg"
+                        alt="Poster of The Lord of the Rings: The Fellowship of the Ring">
+                    <img src="../resources/images/inception.jpg" alt="Poster of Inception">
+                    <img src="../resources/images/titanic.jpg" alt="Poster of Titanic">
+                    <img src="../resources/images/forrest-gump.jpg" alt="Poster of Forrest Gump">
+                    <img src="../resources/images/matrix.jpg" alt="Poster of The Matrix">
+                </div>
+                <button type="button" class="carousel-btn prev" aria-label="Previous poster">&#10094;</button>
+                <button type="button" class="carousel-btn next" aria-label="Next poster">&#10095;</button>
+                <div class="carousel-dots"></div>
+            </div>
+
+            <script>
+                (function () {
+                    const carousel = document.getElementById("carousel");
+                    const track = carousel.querySelector(".carousel-track");
+                    const slides = track.children;
+                    const dotsBox = carousel.querySelector(".carousel-dots");
+                    let index = 0;
+                    let timer;
+
+                    // Crear los puntos
+                    for (let i = 0; i < slides.length; i++) {
+                        const dot = document.createElement("button");
+                        dot.setAttribute("aria-label", "Ir a la foto " + (i + 1));
+                        dot.addEventListener("click", () => { goTo(i); restart(); });
+                        dotsBox.appendChild(dot);
+                    }
+                    const dots = dotsBox.children;
+
+                    function goTo(i) {
+                        index = (i + slides.length) % slides.length;
+                        track.style.transform = "translateX(-" + index * 100 + "%)";
+                        for (let d = 0; d < dots.length; d++) {
+                            dots[d].classList.toggle("active", d === index);
+                        }
+                    }
+
+                    function restart() {
+                        clearInterval(timer);
+                        timer = setInterval(() => goTo(index + 1), 4000); // cambia cada 4 s
+                    }
+
+                    carousel.querySelector(".prev").addEventListener("click", () => { goTo(index - 1); restart(); });
+                    carousel.querySelector(".next").addEventListener("click", () => { goTo(index + 1); restart(); });
+
+                    // Deslizar en móvil
+                    let startX = 0;
+                    carousel.addEventListener("touchstart", e => { startX = e.touches[0].clientX; });
+                    carousel.addEventListener("touchend", e => {
+                        const diff = e.changedTouches[0].clientX - startX;
+                        if (Math.abs(diff) > 50) { goTo(diff < 0 ? index + 1 : index - 1); restart(); }
+                    });
+
+                    goTo(0);
+                    restart();
+                })();
+            </script>
+        </section>
+
+        <!-- Table with the details of every film -->
+        <section>
+            <h2>Our movie catalog</h2>
+            <p>The films listed below might change several times in a month.</p>
+            <!-- table-responsive prevents the table from overflowing on mobile -->
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <caption>Films available at Horizon Movies at this moment.</caption>
+                    <thead>
+                        <tr>
+                            <th>Movie</th>
+                            <th>Director</th>
+                            <th>Genre</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The Black Ball (La bola negra)</td>
+                            <td>Javier Calvo and Javier Ambrossi</td>
+                            <td>Drama</td>
+                            <td>A drama inspired by an unfinished Lorca play, spanning three eras of Spanish history.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Interstellar</td>
+                            <td>Christopher Nolan</td>
+                            <td>Science fiction</td>
+                            <td>Astronauts travel through a wormhole to save humanity.</td>
+                        </tr>
+                        <tr>
+                            <td>The Terminal</td>
+                            <td>Steven Spielberg</td>
+                            <td>Comedy drama</td>
+                            <td>A man gets stranded in a New York airport, unable to enter or leave the country.</td>
+                        </tr>
+                        <tr>
+                            <td>The Godfather</td>
+                            <td>Francis Ford Coppola</td>
+                            <td>Crime drama</td>
+                            <td>The saga of a powerful mafia family and Michael Corleone's rise to power.</td>
+                        </tr>
+                        <tr>
+                            <td>Pulp Fiction</td>
+                            <td>Quentin Tarantino</td>
+                            <td>Crime</td>
+                            <td>Intertwined stories of criminals in Los Angeles, told out of chronological order.</td>
+                        </tr>
+                        <tr>
+                            <td>The Lord of the Rings: The Fellowship of the Ring</td>
+                            <td>Peter Jackson</td>
+                            <td>Fantasy adventure</td>
+                            <td>A hobbit sets out to destroy a ring that could doom the world.</td>
+                        </tr>
+                        <tr>
+                            <td>Inception</td>
+                            <td>Christopher Nolan</td>
+                            <td>Science fiction thriller</td>
+                            <td>A dream thief must plant an idea in a businessman's mind.</td>
+                        </tr>
+                        <tr>
+                            <td>Titanic</td>
+                            <td>James Cameron</td>
+                            <td>Romance drama</td>
+                            <td>An impossible love story aboard the famous ship that sank in 1912.</td>
+                        </tr>
+                        <tr>
+                            <td>Forrest Gump</td>
+                            <td>Robert Zemeckis</td>
+                            <td>Drama comedy</td>
+                            <td>A simple man unknowingly takes part in major moments of American history.</td>
+                        </tr>
+                        <tr>
+                            <td>The Matrix</td>
+                            <td>Lana and Lilly Wachowski</td>
+                            <td>Science fiction action</td>
+                            <td>A hacker discovers reality is a simulation run by machines.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Check the <a href="prices.html">prices</a> before you choose, and read what other viewers think in the <a
+                    href="reviews.html">reviews</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Horizon Movies. All rights reserved.</p>
+        <address>Araba Kalea, 39 &middot; Open every day from 16:00</address>
+        <p>Questions? <a href="about_us.html">Contact us</a></p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Man: Brand New Day - Survey</title>
+    <link rel="icon" href="../resources/image/favicon.jpg">
+    <link rel="stylesheet" href="../resources/styles/style-1.css">
+</head>
+
+<body>
+    <!-- Navigation menu -->
+    <nav id="navigation-menu">
+        <ul class="menu">
+            <li><a href="../index.html">Main</a></li>
+            <li><a href="survey.html" class="active">Survey</a></li>
+            <li><a href="https://www.imdb.com/es-es/title/tt22084616/" target="_blank">Movie website</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Movie Survey</h1>
+        <p>Tell us what you thought of Spider-Man: Brand New Day.</p>
+
+        <section>
+            <h2>What did you think about the movie?</h2>
+
+            <!-- Survey form with all required field types -->
+            <form action="survey.html" method="get" onsubmit="alert('Thank you! Your answers have been recorded.');">
+                <fieldset>
+                    <legend>Your Feedback</legend>
+
+                    <!-- Text field -->
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </p>
+
+                    <!-- Multi-line text area -->
+                    <p>
+                        <label for="comment">Comment:</label>
+                        <textarea id="comment" name="comment" rows="5" cols="40"></textarea>
+                    </p>
+
+                    <!-- Colour picker -->
+                    <p>
+                        <label for="movie-color">Colour that conveys the movie:</label>
+                        <input type="color" id="movie-color" name="movie-color">
+                    </p>
+
+                    <!-- Checkbox -->
+                    <p>
+                        <input type="checkbox" id="recommend" name="recommend">
+                        <label for="recommend">I would recommend this movie</label>
+                    </p>
+
+                    <!-- Drop-down list -->
+                    <p>
+                        <label for="rating">Rating:</label>
+                        <select id="rating" name="rating">
+                            <option value="1">1 - Very bad</option>
+                            <option value="2">2 - Bad</option>
+                            <option value="3">3 - Regular</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </p>
+
+                    <!-- Buttons -->
+                    <p>
+                        <button type="submit">Submit</button>
+                        <button type="reset">Clear</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Movie Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

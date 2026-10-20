@@ -1,0 +1,224 @@
+/* ==========================================================
+   styles.css - Estilos de la web de la encuesta de cine
+   ========================================================== */
+
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #222;
+    background-color: #f7f5f0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ===== Menú de navegación ===== */
+#navigation-menu {
+    background-color: #1a1a1a;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navigation-menu .menu {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+#navigation-menu .menu a {
+    display: block;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efecto al pasar el ratón (requisito 6) */
+#navigation-menu .menu a:hover {
+    color: #c9a24b;
+    background-color: #444;
+}
+
+/* Apartado de la página actual, distinto al resto (requisito 7) */
+#navigation-menu .menu a.active {
+    background-color: #e50914;
+    font-weight: bold;
+    border-bottom: 4px solid #c9a24b;
+}
+
+/* ===== Contenido principal ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+main > h1 {
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+main > p {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* ===== Secciones ===== */
+section {
+    margin-bottom: 50px;
+}
+
+section > h2 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    border-left: 5px solid #c9a24b;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+/* ===== Multimedia ===== */
+video {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 30px;
+    border: 2px solid #c9a24b;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+audio {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* ===== Formulario de la encuesta ===== */
+form {
+    max-width: 600px;
+}
+
+fieldset {
+    border: 2px solid #c9a24b;
+    background-color: #fff;
+    padding: 20px;
+}
+
+legend {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0 10px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+label {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input[type="color"] {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* ===== Botones del formulario ===== */
+button {
+    padding: 10px 25px;
+    border: none;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #e50914;
+}
+
+button[type="submit"]:hover {
+    background-color: #b0070f;
+}
+
+button[type="reset"] {
+    background-color: #555;
+}
+
+button[type="reset"]:hover {
+    background-color: #333;
+}
+
+/* ===== Pie de página ===== */
+footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    main > h1 {
+        font-size: 2rem;
+    }
+
+    section > h2 {
+        font-size: 1.4rem;
+    }
+
+    #navigation-menu .menu a {
+        padding: 12px 12px;
+        font-size: 0.8rem;
+    }
+}

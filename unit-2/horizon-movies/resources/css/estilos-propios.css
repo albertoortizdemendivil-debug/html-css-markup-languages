@@ -1,0 +1,289 @@
+/* ==========================================================
+   estilos-propios.css - Estilos propios de la web (punto de partida)
+   Se carga DESPUES de Bootstrap, asi que sobrescribe lo que haga falta.
+   ========================================================== */
+
+/* ===== Base ===== */
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #222;
+    background-color: #f7f5f0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: #0b6e99;
+}
+
+/* ===== Menu de navegacion ===== */
+#menu-principal {
+    background-color: #1b2a41;
+}
+
+#menu-principal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#menu-principal a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efecto al pasar el raton */
+#menu-principal a:hover {
+    color: #ffd166;
+    background-color: #324a5f;
+}
+
+/* Pagina actual, distinta al resto */
+#menu-principal a.active {
+    background-color: #0b6e99;
+    font-weight: bold;
+    border-bottom: 4px solid #ffd166;
+}
+
+/* ===== Contenido principal ===== */
+main {
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+main > h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 15px;
+}
+
+main > p {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section > h2 {
+    font-size: 1.7rem;
+    border-left: 5px solid #ffd166;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+/* ===== Tarjetas (article): el borde del color del fondo hace de separacion ===== */
+article {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 10px solid #f7f5f0;
+    padding: 12px;
+}
+
+article h2,
+article h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* ===== REVIEWS ===== */
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #0b6e99;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+
+
+/* ===== Imagenes y figuras ===== */
+figure {
+    margin-bottom: 25px;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 3;
+    object-position: center;
+}
+
+figcaption {
+    padding-left: 19px;
+    color: #555;
+}
+
+.team-photo {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.facility-photo {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ===== Formulario ===== */
+fieldset {
+    background-color: #fff;
+    border: 2px solid #0b6e99;
+    padding: 20px;
+}
+
+legend {
+    float: none;
+    width: auto;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+
+label {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+}
+
+button {
+    padding: 10px 25px;
+    border: none;
+    color: #fff;
+    background-color: #0b6e99;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #084c6b;
+}
+
+button[type="reset"] {
+    background-color: #555;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #1b2a41;
+    color: #ddd;
+    text-align: center;
+    padding: 25px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    main > h1 {
+        font-size: 2rem;
+    }
+
+    section > h2 {
+        font-size: 1.4rem;
+    }
+
+    #menu-principal a {
+        padding: 12px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Pantallas muy estrechas (400px o menos) */
+@media (max-width: 400px) {
+    #menu-principal a {
+        padding: 10px 8px;
+        font-size: 0.75rem;
+    }
+
+    fieldset {
+        padding: 12px;
+    }
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  }
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .carousel-track img {
+    min-width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+  }
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .carousel-btn:hover { background: rgba(0, 0, 0, 0.8); }
+  .carousel-btn.prev { left: 12px; }
+  .carousel-btn.next { right: 12px; }
+  .carousel-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  .carousel-dots button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0;
+  }
+  .carousel-dots button.active { background: #fff; }
+  @media (max-width: 600px) {
+    .carousel-track img { height: 260px; }
+  }

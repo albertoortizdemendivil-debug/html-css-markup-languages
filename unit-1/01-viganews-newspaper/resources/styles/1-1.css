@@ -1,0 +1,229 @@
+/* ============================================
+   1-1.css — VIGA News
+   Ruta esperada: recursos/styles/1-1.css
+   ============================================ */
+
+/* --- Reset básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #222;
+    background-color: #f7f5f0;
+    line-height: 1.6;
+}
+
+/* --- Menú de navegación --- */
+#main-menu {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 12px 20px;
+    display: flex;
+    gap: 20px;
+}
+
+#main-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+#main-menu a:hover {
+    color: #c9a24b;
+}
+
+/* --- Header --- */
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background-color: #fff;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 3px solid #1a1a1a;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+header p {
+    margin-top: 15px;
+    font-style: italic;
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* --- Main --- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+main > h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+/* --- Secciones --- */
+section {
+    margin-bottom: 50px;
+}
+
+section > h2 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    border-left: 5px solid #c9a24b;
+    padding-left: 12px;
+    margin-bottom: 25px;
+}
+
+/* --- Artículos --- */
+article {
+    margin-bottom: 30px;
+}
+
+article h3,
+article h4 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+article time {
+    display: block;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+article p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* --- Abreviaturas --- */
+abbr {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+/* --- Citas / blockquote --- */
+blockquote {
+    background-color: #efece4;
+    border-left: 4px solid #c9a24b;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #444;
+}
+
+blockquote a {
+    color: inherit;
+    text-decoration: none;
+}
+
+blockquote abbr {
+    font-style: normal;
+}
+
+/* --- Imágenes --- */
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 8px;
+}
+
+/* --- Enlace "Go back to main menu" --- */
+section > p > a {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+    color: #c9a24b;
+    text-decoration: none;
+}
+
+section > p > a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+footer h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+footer a {
+    color: #c9a24b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section > h2 {
+        font-size: 1.4rem;
+    }
+
+    article h3,
+    article h4 {
+        font-size: 1.1rem;
+    }
+}

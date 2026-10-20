@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Man: Brand New Day - Main</title>
+    <link rel="icon" href="resources/image/favicon.jpg">
+    <link rel="stylesheet" href="resources/styles/style-1.css">
+</head>
+
+<body>
+
+    <!-- Navigation menu -->
+    <nav id="navigation-menu">
+        <ul class="menu">
+            <li><a href="index.html" class="active">Main</a></li>
+            <li><a href="html/survey.html">Survey</a></li>
+            <li><a href="https://www.imdb.com/es-es/title/tt22084616/" target="_blank">Movie website</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Spider-Man: Brand New Day</h1>
+        <p>Welcome to the movie page! Here you can watch the trailer and listen to the soundtrack.</p>
+        <section>
+            <h2>Trailer</h2>
+            <!-- Video: visible controls, no autoplay, poster image -->
+            <video controls poster="resources/image/poster-spiderman.jpg">
+                <source src="resources/video/trailer-spiderman.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <h2>Soundtrack</h2>
+            <!-- Audio: two alternative formats -->
+            <audio controls>
+                <source src="resources/audio/suite-new-day.ogg" type="audio/ogg">
+                <source src="resources/audio/suite-new-day.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Movie Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

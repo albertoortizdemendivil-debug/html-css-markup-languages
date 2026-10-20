@@ -1,0 +1,54 @@
+/* Estilos generales de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 20px;
+    background-color: #fafafa;
+    color: #222222;
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Req. 5: estilo con id (etiqueta concreta: la tabla del catálogo) */
+#songs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#songs-table caption {
+    font-weight: bold;
+    padding: 10px;
+}
+
+#songs-table th,
+#songs-table td {
+    border: 1px solid #999999;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+#songs-table th {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+/* Req. 6: estilo común con class para todas las filas del catálogo */
+.record-row {
+    font-size: 16px;
+}
+
+/* Req. 7: color de fondo alterno con pseudo-clase nth-child (filas pares) */
+#songs-table tbody tr:nth-child(even) {
+    background-color: #e8e8f5;
+}
+
+/* Req. 8: efecto al pasar el ratón por las filas (debe ir después de nth-child) */
+#songs-table tbody tr:hover {
+    background-color: #ffe9a8;
+}
