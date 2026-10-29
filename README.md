@@ -2,7 +2,7 @@
 
 Coursework from the *Lenguajes de Marcas* (Markup Languages) module: five small websites, built in order from plain semantic HTML to a six-page Bootstrap site. Each project adds something new to the previous one, so the folders are best read in order.
 
-No frameworks other than Bootstrap in the last project; the only JavaScript is a poster carousel and a form alert.
+No frameworks other than Bootstrap in the last project; the only JavaScript is a poster carousel and a form alert. Team project (3 people). My part: the home page (index.html), the contact form (about_us.html) and the custom stylesheet (estilos-propios.css). The other pages were built by my two teammates, who are not credited by name here.
 
 ## Projects
 
