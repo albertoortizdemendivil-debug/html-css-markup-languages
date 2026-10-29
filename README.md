@@ -26,7 +26,7 @@ Built between September and October 2026.
 ## Notes
 
 - **Forms are front-end only.** There is no server, so nothing is sent or stored. The Spider-Man form just shows an alert, and the Horizon Movies contact form has a `netlify` attribute for when it is hosted there.
-- The contact phone, email and team surnames in the sample sites are fictional or shortened.
+- The contact phone and email in the sample sites are fictional, and my teammates’ names are anonymised.
 - Bootstrap is included unmodified under the [MIT licence](https://github.com/twbs/bootstrap/blob/main/LICENSE); its licence header is kept in the file.
 - The main file of each project is `index.html`. Open it in a browser, or enable GitHub Pages to see the sites live.
 
