@@ -32,4 +32,4 @@ Built between September and October 2026.
 
 ## Author
 
-Alberto Ortiz de Mendivil, ASIR student. More projects: [homelab](https://github.com/albertoortizdemendivil-debug/homelab) and [linux-network-services-lab](https://github.com/albertoortizdemendivil-debug/linux-network-services-lab).
+Alberto Ortiz de Mendivil, ASIR student. More projects: [homelab](https://github.com/albertoortizdemendivil-debug/homelab) and [linux-network-services-lab](https://github.com/albertoortizdemendivil-debug/linux-network-services-lab-2025).
